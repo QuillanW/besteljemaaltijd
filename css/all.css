@@ -127,7 +127,7 @@ ul#sub li:hover {
     position: absolute;
     background-color: var(--darkaccent);
     grid-area: footer;
-    bottom: -100px;
+    bottom: 0;
     width: 100%;
 }
 
