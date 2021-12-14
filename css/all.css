@@ -1,8 +1,16 @@
+/* WERK HIER NIET IN!! */
+
+/* Gebruik var(--kleurnaam) om een van deze kleuren te pakken, gebruik geen eigen kleuren! */
 :root {
-    --background: #EBE8E0;
-    --textcolor: black;
-    --darkaccent: #3A2618;
-    --lightaccent: #9A8873;
+    --background: #929292;
+    --textcolor: #b8b8b8;
+    --darkaccent: #161616;
+    --lightaccent: #b8b8b8;
+}
+
+body {
+    background: var(--background);
+    overflow-x: hidden;
 }
 
 * {
@@ -11,25 +19,28 @@
     padding: 0;
 }
 
-#gridbox{
+#gridbox {
+    width: 100%;
+    height: 90vh;
     z-index: 1;
     display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 2,5fr 2,5fr;
-    grid-template-areas: 
-    'maincontent sidebar'
-    'footer footer';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'maincontent maincontent'
+        'footer footer';
 }
 
-#gridbox > div {
+#gridbox>div {
     z-index: 1;
 }
 
 #header {
     background-color: var(--darkaccent);
     top: 0;
-    position: sticky; 
+    position: sticky;
     z-index: 2;
+    height: 150px;
 }
 
 a:link {
@@ -44,24 +55,26 @@ a:visited {
     text-decoration: none;
 }
 
-#nav{
+#nav {
+    color: var(--textcolor);
     text-align: right;
     margin-top: 0;
     display: inline-block;
-    margin-left: 700px;
+    float: right;
+    margin-right: 50px;
 }
 
 
-#nav > ul > li {
+#nav>ul>li {
     list-style-type: none;
     display: inline-block;
     padding: 5px 25px;
     position: relative;
-    border-radius: 25px;
+    border-radius: 5px;
     margin-right: 20px;
 }
 
-#nav > ul > li:hover{
+#nav>ul>li:hover {
     background-color: var(--lightaccent);
     transform: scale(1.10);
     transition: 0.3s;
@@ -69,16 +82,16 @@ a:visited {
 
 ul#sub {
     position: absolute;
-    background-color: var(--background);
+    background-color: var(--darkaccent);
     list-style-type: none;
-    width:125px;
+    width: 125px;
     padding-left: 0px;
     margin-left: -25px;
     padding-top: 5px;
     opacity: 0;
     transform: scale(1.05);
     transition: 0.3s;
-    border-radius: 25px;
+    border-radius: 5px;
     text-align: left;
 }
 
@@ -88,14 +101,14 @@ ul#sub li {
     padding-bottom: 5px;
 }
 
-#nav li:hover #sub{
+#nav li:hover #sub {
     opacity: 1;
 }
 
-ul#sub li:hover{
-    color: var(--background);
+ul#sub li:hover {
+    color: var(--textcolor);
     background-color: var(--darkaccent);
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 #maincontent {
@@ -103,51 +116,42 @@ ul#sub li:hover{
     margin: 1em;
     grid-area: maincontent;
     height: 700px;
-    background-color: var(--lightaccent);
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
 }
 
-#sidebar {
-    background-color: var(--background);
-    margin: 1em;
-    grid-area: sidebar;
-    text-align: center;
-    background-color: var(--background);
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-} 
-
 #footer {
+    color: var(--textcolor);
+    position: absolute;
     background-color: var(--darkaccent);
     grid-area: footer;
-    bottom:0;
+    bottom: -100px;
     width: 100%;
 }
 
-#informatie{
+#informatie {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#informatie:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-#social{
+#social {
     width: 5%;
 }
 
-#logo{
-    width: 15%;
+#social:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
-#tekst{
+#logo {
+    max-height: 140px;
+    margin: 5px;
+    margin-left: 20px;
+}
+
+#tekst {
     text-align: center;
 }
