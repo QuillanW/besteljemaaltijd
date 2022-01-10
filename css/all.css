@@ -23,7 +23,7 @@ body {
     width: 100%;
     z-index: 1;
     display: grid;
-    grid-template-rows: 1fr 150px;
+    grid-template-rows: auto 130px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         'maincontent maincontent'
@@ -124,7 +124,6 @@ ul#sub li:hover {
     background-color: var(--background);
     margin: 1em;
     grid-area: maincontent;
-    height: 100px;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
