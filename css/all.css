@@ -23,7 +23,7 @@ body {
     width: 100%;
     z-index: 1;
     display: grid;
-    grid-template-rows: auto 130px;
+    grid-template-rows: auto 150px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         'maincontent maincontent'
