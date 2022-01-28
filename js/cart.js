@@ -3,7 +3,7 @@ var cart = {
   hPdt: null,
   hItems: null,
   items: {},
-  iURL: "../media/products/",
+  iURL: "../media/",
 
   save: () => {
     localStorage.setItem("cart", JSON.stringify(cart.items));
