@@ -87,6 +87,10 @@ input.p-add {
     box-sizing: border-box;
 }
 
+.c-sale {
+    font-size: 25px;
+}
+
 .c-name, .c-total, input.c-empty, input.c-checkout {
     width: 100%;
 }

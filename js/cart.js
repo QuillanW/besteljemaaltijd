@@ -117,12 +117,19 @@ var cart = {
 
         subtotal = cart.items[id] * p.price;
         total += subtotal;
+        var saleTotal = 0
       }
 
       item = document.createElement("div");
       item.className = "c-total";
       item.id = "c-total";
-      item.innerHTML = "TOTAL: $" + total.toFixed(2);
+      item.innerHTML = "SUBTOTAL: €" + total.toFixed(2);
+      cart.hItems.appendChild(item);
+
+      item = document.createElement("div");
+      item.className = "c-saleTotal";
+      item.id = "c-saleTotal";
+      item.innerHTML = "TOTAL: €" + saleTotal.toFixed(2);
       cart.hItems.appendChild(item);
 
       item = document.createElement("input");
@@ -137,6 +144,12 @@ var cart = {
       item.value = "Checkout";
       item.onclick = cart.checkout;
       item.className = "c-checkout cart";
+      cart.hItems.appendChild(item);
+
+      item = document.createElement("sale");
+      item.className = "c-sale";
+      item.id = "c-sale";
+      item.innerHTML = "Is jouw bestelling boven €50? dan krijg je 15% korting!"
       cart.hItems.appendChild(item);
     }
   },
@@ -159,7 +172,10 @@ var cart = {
       var total = 0;
       for (let id in cart.items) {
         total += cart.items[id] * products[id].price;
-        document.getElementById("c-total").innerHTML = "TOTAL: $" + total;
+        document.getElementById("c-total").innerHTML = "SUBTOTAL: €" + total.toFixed(2);
+        var saleCheck = total
+        if (saleCheck > 50) {sale = 0.85} else {sale = 1}
+        document.getElementById("c-saleTotal").innerHTML = "TOTAL: €" + (total * sale).toFixed(2);
       }
     }
   },
@@ -171,7 +187,7 @@ var cart = {
   },
 
   checkout: () => {
-    alert("TO DO");
   }
 };
+
 window.addEventListener("DOMContentLoaded", cart.init);
