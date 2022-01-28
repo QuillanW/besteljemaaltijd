@@ -107,9 +107,14 @@ input.p-add {
     width: 75%;
 }
 
-.c-total {
+.c-total{
     font-weight: 700;
     font-size: 1.2em;
+}
+
+.c-saleTotal {
+    font-weight: 700;
+    font-size: 1.8em;
 }
 
 @media screen AND (max-width: 768px) {

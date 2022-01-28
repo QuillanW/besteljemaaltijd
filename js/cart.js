@@ -172,9 +172,8 @@ var cart = {
       var total = 0;
       for (let id in cart.items) {
         total += cart.items[id] * products[id].price;
+        if (total > 50) {sale = 0.85} else {sale = 1};
         document.getElementById("c-total").innerHTML = "SUBTOTAL: €" + total.toFixed(2);
-        var saleCheck = total
-        if (saleCheck > 50) {sale = 0.85} else {sale = 1}
         document.getElementById("c-saleTotal").innerHTML = "TOTAL: €" + (total * sale).toFixed(2);
       }
     }
@@ -187,6 +186,7 @@ var cart = {
   },
 
   checkout: () => {
+    window.location.href = "checkout.html";
   }
 };
 
