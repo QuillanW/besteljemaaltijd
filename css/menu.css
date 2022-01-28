@@ -1,0 +1,24 @@
+    #deel1 {
+    background-color: whitesmoke;
+    
+    }
+    
+    #deel2 {
+    background-color: goldenrod
+    
+ 
+    }
+    
+    #deel3 {
+    background-color: whitesmoke;
+
+    }
+
+    .alles {
+        column-count: 3;
+        
+    }
+
+    #kies {
+        background-color: goldenrod
+    }
