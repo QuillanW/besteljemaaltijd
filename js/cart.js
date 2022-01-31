@@ -174,7 +174,7 @@ var cart = {
       for (let id in cart.items) {
         total += cart.items[id] * products[id].price;
         if (total > 50) {sale = 0.85} else {sale = 1};
-        saleTotal = total * sale;
+        saleTotal = total * sale
         document.getElementById("c-total").innerHTML = "SUBTOTAL: €" + total.toFixed(2);
         document.getElementById("c-saleTotal").innerHTML = "TOTAL: €" + saleTotal.toFixed(2);
       }
