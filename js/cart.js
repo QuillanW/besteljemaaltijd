@@ -169,6 +169,7 @@ var cart = {
 
     else {
       cart.items[pid] = qty;
+      let sale = 1;
       var total = 0;
       for (let id in cart.items) {
         total += cart.items[id] * products[id].price;

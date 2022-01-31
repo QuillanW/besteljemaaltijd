@@ -1,0 +1,49 @@
+#fotolina{
+    height:280px;
+    width:290px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#fotovera{
+height:360px;
+width:280px;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+#fotoquillan{
+height:300px;
+width:250px;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+#fotobrett{
+height:350px;
+width:250px;
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+#fotosteakhouse{
+    margin-left:10px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+  }
+
+
